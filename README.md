@@ -22,7 +22,7 @@ The main features of this board include:
 * Dead reckoning for accurate position estimation in case of a lost satellite connection.
 * An active antenna for preemptive filtering of GNSS signals.
 * I2C and UART communication with our telemetry board.
-* A rechargeable backup 3V battery to enable “hot starts” which allows reception of location data 2 seconds after startup
+* A rechargeable backup 3V battery to enable “hot starts” which allows reception of location data 2 seconds after startup.
 
 ## Schematic
 The GPS breakout board schematic can be broken up into 4 main sections: the connectors, the power, the NEO-M9V, and the debug LEDs.
