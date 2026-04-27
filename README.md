@@ -10,7 +10,7 @@ A huge thank you to PCBWay for manufacturing the GPS Breakout Board. Their suppo
 
 <p align="center"><img width="389" height="419" alt="image" src="https://github.com/user-attachments/assets/ca6688d3-8d74-46ba-b76c-6e94bf4b5b8e" /></p>
 
-<p align="center">_Figure 1: Front view render of the GPS breakout board_</p>
+<p align="center">Figure 1: Front view render of the GPS breakout board</p>
 
 ## Overview
 The goal of the GPS project was to develop a breakout board that could interface with our telemetry board to give us location data for both real-time pit crew analysis and post-race strategy analysis.
@@ -29,7 +29,7 @@ The GPS breakout board schematic can be broken up into 4 main sections: the conn
 
 <p align="center"><img width="930" height="904" alt="image" src="https://github.com/user-attachments/assets/77a5a36d-553f-4e1d-b968-746f00a07743" /></p>
 
-<p align="center"> *Figure 2: Schematic of the GPS breakout board* </p>
+<p align="center">Figure 2: Schematic of the GPS breakout board.</p>
 
 ### 0. Connectors
 The GPS breakout board interfaces with the telemetry board using 14 asymmetric male headers to prevent it being connected incorrectly. The multiple ground pins ensure a more uniform ground plane which is critical for other sections of the board such as the coplanar waveguide.
@@ -54,12 +54,14 @@ There are two points of interest on this board that are worth exploring in more 
 The GNSS signals operate at a frequency between 5000–6000MHz and require special attention when routing. Signals of this frequency produce strong electric and magnetic fields which can couple into nearby signals and cause distortions. To contain these fields, coplanar waveguide geometry was implemented surrounding the radio frequency trace. This geometry acts as a faraday cage and stops the fields interfering with other signals.
 
 <p align="center"><img width="471" height="388" alt="image" src="https://github.com/user-attachments/assets/bcbe839a-dc18-406a-abc1-dbe8c4112bbf" /></p>
-<p align="center">*Figure 3: Cross sectional view of coplanar waveguide geometry.*</p>
+
+<p align="center">Figure 3: Cross sectional view of coplanar waveguide geometry.</p>
 
 Additionally, changes in impedance can cause the signal waves to reflect along the trace and create noise in the signal. Impedance matching and curved traces were used to eliminate the risk of echoing.
 
 <p align="center"><img width="606" height="804" alt="image" src="https://github.com/user-attachments/assets/ab410495-1f3b-4ebe-aded-15f325ead565" /></p>
-<p align="center">*Figure 4: Implementation of impedance matching and coplanar waveguide on the GPS breakout board*</p>
+
+<p align="center">Figure 4: Implementation of impedance matching and coplanar waveguide on the GPS breakout board.</p>
 
 ### Bias-T Circuit
 Since the antenna cable needs to supply both power and the GNSS signal. A bias-T circuit was implemented to merge the AC GNSS signal and DC power. The inductor and capacitor block AC signals from entering the RF_VCC pin while allowing the DC power to merge into the GNSS signal line and power the active antenna.
