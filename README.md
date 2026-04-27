@@ -57,7 +57,7 @@ The GNSS signals operate at a frequency between 5000–6000MHz and require speci
 
 <p align="center">Figure 3: Cross sectional view of coplanar waveguide geometry.</p>
 
-Additionally, changes in impedance can cause the signal waves to reflect along the trace and create noise in the signal. Impedance matching and curved traces were used to eliminate the risk of echoing.
+Additionally, changes in impedance can cause the signal waves to reflect along the trace and create noise. Impedance matching and curved traces were used to eliminate the risk of reflection.
 
 <p align="center"><img width="606" height="804" alt="image" src="https://github.com/user-attachments/assets/ab410495-1f3b-4ebe-aded-15f325ead565" /></p>
 
