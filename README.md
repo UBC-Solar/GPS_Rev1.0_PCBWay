@@ -66,5 +66,9 @@ Additionally, changes in impedance can cause the signal waves to reflect along t
 ### Bias-T Circuit
 Since the antenna cable needs to supply both power and the GNSS signal. A bias-T circuit was implemented to merge the AC GNSS signal and DC power. The inductor and capacitor block AC signals from entering the RF_VCC pin while allowing the DC power to merge into the GNSS signal line and power the active antenna.
 
-
+## PCB Features
+* Coplanar waveguide geometry
+* Impedence matching
+* Bias-T circuit
+* SMA connector
 
