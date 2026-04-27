@@ -22,5 +22,31 @@ The main features of this board include:
 * Dead reckoning for accurate position estimation in case of a lost satellite connection.
 * An active antenna for preemptive filtering of GNSS signals.
 * I2C and UART communication with our telemetry board.
+* A rechargeable backup 3V battery to enable “hot starts” which allows reception of location data 2 seconds after startup
+
+## Schematic
+The GPS breakout board schematic can be broken up into 4 main sections: the connectors, the power, the NEO-M9V, and the debug LEDs.
+
+<p align="center"><img width="930" height="904" alt="image" src="https://github.com/user-attachments/assets/77a5a36d-553f-4e1d-b968-746f00a07743" /></p>
+
+<p align="center"> *Figure 2: Schematic of the GPS breakout board* </p>
+
+### 0. Connectors
+The GPS breakout board interfaces with the telemetry board using 14 asymmetric male headers to prevent it being connected incorrectly. The multiple ground pins ensure a more uniform ground plane which is critical for other sections of the board such as the coplanar waveguide.
+
+It also connects to an exterior active antenna using an industry-standard SMA connector. A bias-T circuit is used to ensure that power and GNSS signals can be transmitted using the same cable.
+
+Finally, the breakout board has two male pins that can be shorted to disable the backup battery.
+
+### 1. Power
+This section houses the standard decoupling capacitor along with this backup 3V battery. A simple charging circuit is also implemented to allow the backup battery to charge when not in use.
+
+### 2. NEO-M9V
+The NEO-M9V is the main IC for this project. It receives data from the GNSS signal as well as data from an integrated IMU and uses both sources to calculate the car’s location. In the event that the GNSS signal is lost, the NEO-M9V enters dead reckoning mode and makes its best prediction of the car’s location using the IMU data. The final location solution is then broadcast to the telemetry board using I2C.
+
+### 3. Debug LEDs
+Debug LEDs were added to the board to indicate power and satellite reception. The TIMEPULSE pin on the NEO-M9V can be configured to blink when the board is receiving a satellite signal. Therefore, along with using it for its intended purpose of providing a synchronized clock, we used it as a debug LED to indicate if the NEO-M9V was in dead reckoning mode.
+
+
 
 
