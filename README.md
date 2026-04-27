@@ -14,9 +14,9 @@ The goal of the GPS project was to develop a breakout board that could interface
 When reviewing our solar car's performance, having accurate location data is critical as it allows us to corroborate other data (such as speed and acceleration) with our car’s position on track. This is the first iteration of this board and is part of UBC Solar’s initiative to move towards full in-house production.
 
 The main features of this board include:
-> * Access to the full GNSS satellite constellation for location tracking worldwide.
-> * Dead reckoning for accurate position estimation in case of a lost satellite connection.
-> * An active antenna for preemptive filtering of GNSS signals.
-> * I2C and UART communication with our telemetry board.
+* Access to the full GNSS satellite constellation for location tracking worldwide.
+* Dead reckoning for accurate position estimation in case of a lost satellite connection.
+* An active antenna for preemptive filtering of GNSS signals.
+* I2C and UART communication with our telemetry board.
 
 
