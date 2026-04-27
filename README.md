@@ -27,7 +27,7 @@ The main features of this board include:
 ## Schematic
 The GPS breakout board schematic can be broken up into 4 main sections: the connectors, the power, the NEO-M9V, and the debug LEDs.
 
-<p align="center"><img width="930" height="904" alt="image" src="https://github.com/user-attachments/assets/77a5a36d-553f-4e1d-b968-746f00a07743" /></p>
+<p align="center"><img width="581" height="565" alt="image" src="https://github.com/user-attachments/assets/77a5a36d-553f-4e1d-b968-746f00a07743" /></p>
 
 <p align="center">Figure 2: Schematic of the GPS breakout board.</p>
 
@@ -53,13 +53,13 @@ There are two points of interest on this board that are worth exploring in more 
 ### Radio Frequency Routing
 The GNSS signals operate at a frequency between 5000–6000MHz and require special attention when routing. Signals of this frequency produce strong electric and magnetic fields which can couple into nearby signals and cause distortions. To contain these fields, coplanar waveguide geometry was implemented surrounding the radio frequency trace. This geometry acts as a faraday cage and stops the fields interfering with other signals.
 
-<p align="center"><img width="471" height="388" alt="image" src="https://github.com/user-attachments/assets/bcbe839a-dc18-406a-abc1-dbe8c4112bbf" /></p>
+<p align="center"><img width="353" height="291" alt="image" src="https://github.com/user-attachments/assets/bcbe839a-dc18-406a-abc1-dbe8c4112bbf" /></p>
 
 <p align="center">Figure 3: Cross sectional view of coplanar waveguide geometry.</p>
 
 Additionally, changes in impedance can cause the signal waves to reflect along the trace and create noise. Impedance matching and curved traces were used to eliminate the risk of reflection.
 
-<p align="center"><img width="606" height="804" alt="image" src="https://github.com/user-attachments/assets/ab410495-1f3b-4ebe-aded-15f325ead565" /></p>
+<p align="center"><img width="455" height="603" alt="image" src="https://github.com/user-attachments/assets/ab410495-1f3b-4ebe-aded-15f325ead565" /></p>
 
 <p align="center">Figure 4: Implementation of impedance matching and coplanar waveguide on the GPS breakout board.</p>
 
