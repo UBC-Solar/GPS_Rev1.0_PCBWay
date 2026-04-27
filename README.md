@@ -47,6 +47,22 @@ The NEO-M9V is the main IC for this project. It receives data from the GNSS sign
 ### 3. Debug LEDs
 Debug LEDs were added to the board to indicate power and satellite reception. The TIMEPULSE pin on the NEO-M9V can be configured to blink when the board is receiving a satellite signal. Therefore, along with using it for its intended purpose of providing a synchronized clock, we used it as a debug LED to indicate if the NEO-M9V was in dead reckoning mode.
 
+## Points of Interest
+There are two points of interest on this board that are worth exploring in more detail. Those being the radio frequency GNSS signal line and the bias-T circuit for the active antenna.
+
+### Radio Frequency Routing
+The GNSS signals operate at a frequency between 5000–6000MHz and require special attention when routing. Signals of this frequency produce strong electric and magnetic fields which can couple into nearby signals and cause distortions. To contain these fields, coplanar waveguide geometry was implemented surrounding the radio frequency trace. This geometry acts as a faraday cage and stops the fields interfering with other signals.
+
+<p align="center"><img width="471" height="388" alt="image" src="https://github.com/user-attachments/assets/bcbe839a-dc18-406a-abc1-dbe8c4112bbf" /></p>
+<p align="center">*Figure 3: Cross sectional view of coplanar waveguide geometry.*</p>
+
+Additionally, changes in impedance can cause the signal waves to reflect along the trace and create noise in the signal. Impedance matching and curved traces were used to eliminate the risk of echoing.
+
+<p align="center"><img width="606" height="804" alt="image" src="https://github.com/user-attachments/assets/ab410495-1f3b-4ebe-aded-15f325ead565" /></p>
+<p align="center">*Figure 4: Implementation of impedance matching and coplanar waveguide on the GPS breakout board*</p>
+
+### Bias-T Circuit
+Since the antenna cable needs to supply both power and the GNSS signal. A bias-T circuit was implemented to merge the AC GNSS signal and DC power. The inductor and capacitor block AC signals from entering the RF_VCC pin while allowing the DC power to merge into the GNSS signal line and power the active antenna.
 
 
 
