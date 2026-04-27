@@ -8,6 +8,9 @@
 ## Acknowledgements 
 A huge thank you to PCBWay for manufacturing the GPS Breakout Board. Their support was invaluable in converting this projects into a reliable component for our newest solar car. PCBWay provides high-quality PCB manufacturing and assembly services that are excellent for rapid prototyping and custom engineering projects.
 
+<img width="389" height="419" alt="image" src="https://github.com/user-attachments/assets/ca6688d3-8d74-46ba-b76c-6e94bf4b5b8e" />
+*Figure 1: Front view render of the GPS breakout board*
+
 ## Overview
 The goal of the GPS project was to develop a breakout board that could interface with our telemetry board to give us location data for both real-time pit crew analysis and post-race strategy analysis.
 
